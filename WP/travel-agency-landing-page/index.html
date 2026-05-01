@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>WanderWorld Travel Agency</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>✈️ WanderWorld</h1>
+    <p>Explore. Dream. Discover.</p>
+  </header>
+
+  <nav>
+    <a href="#destinations">Top Destinations</a>
+    <a href="#offers">Special Offers</a>
+    <a href="#reviews">Customer Reviews</a>
+  </nav>
+
+  <section id="destinations">
+    <h2>🌍 Top Destinations</h2>
+    <div class="cards">
+      <div class="card">🗼 Paris, France</div>
+      <div class="card">🏯 Kyoto, Japan</div>
+      <div class="card">🗽 New York, USA</div>
+      <div class="card">🏖️ Bali, Indonesia</div>
+    </div>
+    <div class="map-section">
+      <p><em>Image Map – Click a region to explore:</em></p>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/World_map_-_low_resolution.svg/800px-World_map_-_low_resolution.svg.png"
+           usemap="#worldmap" alt="World Map" style="width:100%;max-width:600px;border-radius:8px;">
+      <map name="worldmap">
+        <area shape="rect" coords="120,80,220,160" href="#destinations" alt="Europe" title="Europe">
+        <area shape="rect" coords="350,60,500,180" href="#destinations" alt="Asia" title="Asia">
+        <area shape="rect" coords="60,100,160,200" href="#destinations" alt="Americas" title="Americas">
+      </map>
+    </div>
+  </section>
+
+  <section id="offers">
+    <h2>🎁 Special Offers</h2>
+    <ul>
+      <li>🏨 Paris Getaway – 5 nights from ₹75,000</li>
+      <li>🌺 Bali Retreat – 7 nights from ₹55,000</li>
+      <li>🗾 Japan Explorer – 10 nights from ₹1,20,000</li>
+    </ul>
+  </section>
+
+  <section id="reviews">
+    <h2>⭐ Customer Reviews</h2>
+    <blockquote>"WanderWorld made our honeymoon absolutely magical!" – Priya &amp; Rohan</blockquote>
+    <blockquote>"Best travel experience ever. Highly recommend!" – Arjun S.</blockquote>
+  </section>
+</body>
+</html>

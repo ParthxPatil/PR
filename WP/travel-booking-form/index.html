@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Travel Package Booking</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>✈️ Book Your Travel Package</h1>
+    <form>
+      <fieldset>
+        <legend>Select Services</legend>
+        <label><input type="checkbox" name="service" value="meals"> 🍽️ Meals</label>
+        <label><input type="checkbox" name="service" value="hotel"> 🏨 Hotel</label>
+        <label><input type="checkbox" name="service" value="transport"> 🚌 Transport</label>
+        <label><input type="checkbox" name="service" value="guide"> 🗺️ Tour Guide</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Payment Mode</legend>
+        <label><input type="radio" name="payment" value="credit" required> 💳 Credit Card</label>
+        <label><input type="radio" name="payment" value="netbanking"> 🏦 Net Banking</label>
+        <label><input type="radio" name="payment" value="upi"> 📱 UPI</label>
+      </fieldset>
+
+      <button type="submit">Confirm Booking</button>
+    </form>
+  </div>
+</body>
+</html>

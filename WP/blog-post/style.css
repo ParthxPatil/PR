@@ -1,0 +1,16 @@
+body {
+  background: #fafafa; font-family: Georgia, serif;
+  display: flex; justify-content: center; padding: 40px 20px;
+}
+article {
+  max-width: 720px; background: #fff;
+  padding: 40px; border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+h1 { font-size: 2rem; color: #1a1a2e; margin-bottom: 8px; }
+.date { color: #888; font-size: 0.9rem; margin-bottom: 20px; }
+p { line-height: 1.8; margin-bottom: 16px; color: #444; }
+footer {
+  margin-top: 30px; padding-top: 16px;
+  border-top: 1px solid #eee; font-size: 0.9rem; color: #555;
+}

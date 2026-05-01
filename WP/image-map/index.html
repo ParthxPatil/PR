@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>India Map – Clickable Image Map</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #fff8f0; display: flex; flex-direction: column; align-items: center; padding: 40px 20px; }
+    h1 { color: #e44d26; margin-bottom: 8px; }
+    p { color: #666; margin-bottom: 20px; text-align: center; }
+    img { border: 3px solid #e44d26; border-radius: 8px; max-width: 100%; }
+    .states { display: flex; gap: 10px; margin-top: 20px; flex-wrap: wrap; justify-content: center; }
+    .states a { background: #e44d26; color: #fff; padding: 8px 16px; border-radius: 20px; text-decoration: none; font-size: 0.9rem; }
+    .states a:hover { background: #c0392b; }
+  </style>
+</head>
+<body>
+  <h1>🗺️ India – Clickable Map</h1>
+  <p>Click a state name below (or a mapped area on the image) to learn more.</p>
+
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/India-Map.jpg/500px-India-Map.jpg"
+       usemap="#india-map" alt="Map of India" width="500">
+
+  <map name="india-map">
+    <area shape="rect" coords="180,30,280,120"   href="https://en.wikipedia.org/wiki/Jammu_and_Kashmir" alt="J&amp;K" title="Jammu &amp; Kashmir" target="_blank">
+    <area shape="rect" coords="250,120,350,200"  href="https://en.wikipedia.org/wiki/Uttar_Pradesh"    alt="UP"  title="Uttar Pradesh" target="_blank">
+    <area shape="rect" coords="130,200,230,280"  href="https://en.wikipedia.org/wiki/Rajasthan"         alt="Rajasthan" title="Rajasthan" target="_blank">
+    <area shape="rect" coords="300,280,400,360"  href="https://en.wikipedia.org/wiki/Odisha"            alt="Odisha" title="Odisha" target="_blank">
+    <area shape="rect" coords="200,380,320,470"  href="https://en.wikipedia.org/wiki/Tamil_Nadu"        alt="Tamil Nadu" title="Tamil Nadu" target="_blank">
+  </map>
+
+  <div class="states">
+    <a href="https://en.wikipedia.org/wiki/Maharashtra" target="_blank">Maharashtra</a>
+    <a href="https://en.wikipedia.org/wiki/Kerala" target="_blank">Kerala</a>
+    <a href="https://en.wikipedia.org/wiki/West_Bengal" target="_blank">West Bengal</a>
+    <a href="https://en.wikipedia.org/wiki/Gujarat" target="_blank">Gujarat</a>
+    <a href="https://en.wikipedia.org/wiki/Punjab,_India" target="_blank">Punjab</a>
+  </div>
+</body>
+</html>

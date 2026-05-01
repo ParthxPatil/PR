@@ -1,0 +1,9 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { min-height: 100vh; background: linear-gradient(135deg, #00b4d8, #0077b6); display: flex; align-items: center; justify-content: center; }
+.container { background: #fff; padding: 40px; border-radius: 12px; width: 420px; box-shadow: 0 8px 24px rgba(0,0,0,0.15); }
+h1 { text-align: center; color: #0077b6; margin-bottom: 28px; font-size: 1.4rem; }
+fieldset { border: 1.5px solid #cce5f0; border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+legend { font-weight: bold; color: #0077b6; padding: 0 8px; }
+label { display: flex; align-items: center; gap: 10px; margin: 10px 0; cursor: pointer; font-size: 0.98rem; }
+button { width: 100%; padding: 12px; background: #0077b6; color: #fff; border: none; border-radius: 6px; font-size: 1rem; cursor: pointer; }
+button:hover { background: #005f8e; }

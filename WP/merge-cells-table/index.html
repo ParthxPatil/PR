@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rowspan &amp; Colspan Tables</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>School Timetable (rowspan)</h1>
+  <table>
+    <tr><th>Day</th><th>9–10</th><th>10–11</th><th>11–12</th><th>12–1</th></tr>
+    <tr><td rowspan="2">Mon/Wed</td><td>Maths</td><td>English</td><td>Science</td><td>PE</td></tr>
+    <tr><td>History</td><td>Maths</td><td>Art</td><td>Music</td></tr>
+    <tr><td>Tue/Thu</td><td>Science</td><td colspan="2">Lab Work</td><td>English</td></tr>
+    <tr><td>Friday</td><td colspan="4" style="text-align:center;font-style:italic;">Extracurricular Activities</td></tr>
+  </table>
+
+  <h1 style="margin-top:40px;">Invoice Table (colspan)</h1>
+  <table>
+    <tr><th colspan="4">Invoice #INV-2025-001</th></tr>
+    <tr><th>Item</th><th>Qty</th><th>Unit Price</th><th>Total</th></tr>
+    <tr><td>Web Design</td><td>1</td><td>₹25,000</td><td>₹25,000</td></tr>
+    <tr><td>SEO Package</td><td>3</td><td>₹5,000</td><td>₹15,000</td></tr>
+    <tr><td>Domain + Hosting</td><td>1</td><td>₹3,000</td><td>₹3,000</td></tr>
+    <tr><td colspan="3" style="text-align:right;font-weight:bold;">Grand Total</td><td>₹43,000</td></tr>
+  </table>
+</body>
+</html>

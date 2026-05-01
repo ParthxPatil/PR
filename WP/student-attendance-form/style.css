@@ -1,0 +1,11 @@
+body { font-family: Arial, sans-serif; background: #e8f5e9; display: flex; justify-content: center; padding: 40px 20px; }
+.container { background: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 2px 12px rgba(0,0,0,0.1); width: 100%; max-width: 600px; }
+h1 { color: #2e7d32; margin-bottom: 8px; }
+p { margin-bottom: 20px; color: #555; }
+table { border-collapse: collapse; width: 100%; margin-bottom: 20px; }
+th, td { border: 1px solid #a5d6a7; padding: 12px; text-align: center; }
+th { background: #2e7d32; color: #fff; }
+tr:nth-child(even) td { background: #f1f8e9; }
+input[type="checkbox"] { width: 18px; height: 18px; cursor: pointer; }
+button { display: block; width: 100%; padding: 12px; background: #2e7d32; color: #fff; border: none; border-radius: 6px; font-size: 1rem; cursor: pointer; }
+button:hover { background: #1b5e20; }

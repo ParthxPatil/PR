@@ -1,0 +1,7 @@
+body { font-family: Arial, sans-serif; background: #f0f4f8; padding: 30px; }
+h1 { color: #2c3e50; margin-bottom: 20px; }
+table { border-collapse: collapse; border: 2px solid #2c3e50; border-radius: 8px; overflow: hidden; }
+th { background: #2c3e50; color: #fff; padding: 12px 16px; }
+td { padding: 11px 16px; border: 1px solid #bdc3c7; text-align: center; background: #fff; }
+tr:nth-child(even) td { background: #eaf2ff; }
+tr:hover td { background: #d6eaf8; }

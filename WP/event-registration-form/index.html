@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Event Registration Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Event Registration</h1>
+    <form>
+      <label>Full Name
+        <input type="text" placeholder="Enter your name" required>
+      </label>
+      <label>Email Address
+        <input type="email" placeholder="Enter your email" required>
+      </label>
+      <label>Phone Number
+        <input type="tel" placeholder="+91 9876543210" required>
+      </label>
+      <label>Event Type
+        <select required>
+          <option value="">-- Select Event --</option>
+          <option>Workshop</option>
+          <option>Seminar</option>
+          <option>Hackathon</option>
+          <option>Conference</option>
+        </select>
+      </label>
+      <label>Date of Event
+        <input type="date" required>
+      </label>
+      <button type="submit">Register Now</button>
+    </form>
+  </div>
+</body>
+</html>

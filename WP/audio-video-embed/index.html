@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Audio &amp; Video Embed</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #1a1a2e; color: #eee; display: flex; flex-direction: column; align-items: center; padding: 50px 20px; }
+    h1 { color: #7c3aed; margin-bottom: 10px; }
+    section { background: #16213e; padding: 30px; margin: 20px 0; border-radius: 12px; width: 100%; max-width: 600px; }
+    h2 { margin-bottom: 16px; color: #a78bfa; }
+    audio, video { width: 100%; border-radius: 8px; }
+    p { font-size: 0.9rem; color: #aaa; margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <h1>🎵 Multimedia Page</h1>
+
+  <section>
+    <h2>🎧 Audio Player</h2>
+    <audio controls>
+      <source src="audio/background-music.mp3" type="audio/mpeg">
+      <source src="audio/background-music.ogg" type="audio/ogg">
+      Your browser does not support the audio element.
+    </audio>
+    <p>Place your audio file in an <code>audio/</code> folder alongside this HTML file.</p>
+  </section>
+
+  <section>
+    <h2>🎬 Video Player</h2>
+    <video controls poster="">
+      <source src="video/sample-video.mp4" type="video/mp4">
+      <source src="video/sample-video.webm" type="video/webm">
+      Your browser does not support the video element.
+    </video>
+    <p>Place your video file in a <code>video/</code> folder alongside this HTML file.</p>
+  </section>
+</body>
+</html>

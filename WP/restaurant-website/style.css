@@ -1,0 +1,19 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: Georgia, serif; background: #1a0a00; color: #f0e0c8; }
+nav { background: #0d0500; display: flex; align-items: center; justify-content: space-between; padding: 14px 40px; }
+.logo { font-size: 1.4rem; color: #d4a84b; font-weight: bold; }
+nav ul { list-style: none; display: flex; gap: 24px; }
+nav a { color: #f0e0c8; text-decoration: none; }
+nav a:hover { color: #d4a84b; }
+header { text-align: center; padding: 80px 20px; background: radial-gradient(circle, #3d1c02, #1a0a00); }
+header h1 { font-size: 2.8rem; color: #d4a84b; } header p { font-size: 1.1rem; margin-top: 10px; }
+section { padding: 50px 40px; border-top: 1px solid #3d1c02; }
+h2 { color: #d4a84b; margin-bottom: 20px; }
+.menu-grid { display: grid; grid-template-columns: repeat(auto-fill,minmax(200px,1fr)); gap: 16px; }
+.item { background: #2a1005; padding: 20px; border-radius: 8px; text-align: center; border: 1px solid #3d1c02; }
+.item span { font-size: 2.5rem; display: block; margin-bottom: 8px; }
+.item strong { display: block; margin-bottom: 4px; }
+.item em { color: #d4a84b; }
+form { display: flex; flex-direction: column; gap: 12px; max-width: 380px; }
+input { padding: 10px; background: #2a1005; border: 1px solid #3d1c02; color: #f0e0c8; border-radius: 6px; }
+button { padding: 12px; background: #d4a84b; color: #0d0500; border: none; border-radius: 6px; font-size: 1rem; cursor: pointer; font-weight: bold; }
