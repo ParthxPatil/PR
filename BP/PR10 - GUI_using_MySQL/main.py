@@ -1,12 +1,31 @@
 import tkinter as tk
-from tkinter import ttk, messagebox
+from tkinter import ttk, messagebox, simpledialog
 import mysql.connector
 
 # ---------- MySQL Connection ----------
-db = mysql.connector.connect(
-    host="localhost", user="root", password="Karan@99", database="testdb"  # CHANGE THIS
+root = tk.Tk()
+root.withdraw()  # Hide main window temporarily while asking for password
+
+password = simpledialog.askstring(
+    "Database Password", "Enter MySQL password:", show="*"
 )
-cursor = db.cursor()
+
+if not password:
+    messagebox.showerror("Error", "Password is required to connect to the database.")
+    root.destroy()
+    exit()
+
+try:
+    db = mysql.connector.connect(
+        host="localhost", user="root", password=password, database="testdb"
+    )
+    cursor = db.cursor()
+except mysql.connector.Error as e:
+    messagebox.showerror("Connection Failed", f"Could not connect to database:\n{e}")
+    root.destroy()
+    exit()
+
+root.deiconify()  # Show main window now that connection is established
 
 
 # ---------- Functions ----------
@@ -71,7 +90,6 @@ def delete_data():
 
 
 # ---------- GUI Setup ----------
-root = tk.Tk()
 root.title("MySQL CRUD GUI App")
 root.geometry("600x500")
 root.config(bg="#f8f9fa")

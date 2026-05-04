@@ -1,57 +1,44 @@
-"""def prime(num):
-    if num > 1:
-        for i in range(2, int(num // 2) + 1):
-            if (num % i) == 0:
-                print(num, "is not a prime number")
-                break
-        else:
-            print(num, "is a prime number")
+# 1. Check if a number is prime
+def check_prime(n):
+    if n < 2:
+        print(f"{n} is not prime")
+        return
+    for i in range(2, n):
+        if n % i == 0:
+            print(f"{n} is not prime")
+            return
+    print(f"{n} is prime")
+
+
+# 2. Find Greatest Common Divisor (Euclidean Algorithm)
+def find_gcd(a, b):
+    while b != 0:
+        a, b = b, a % b
+    print(f"GCD is {a}")
+
+
+# 3. Check if Even or Odd
+def check_even_odd(n):
+    if n % 2 == 0:
+        print(f"{n} is Even")
     else:
-        print(num, "is not a prime number")
+        print(f"{n} is Odd")
 
 
-num = int(input("Enter a number: "))
-prime(num)
+# 4. Find Factorial using a loop
+def find_factorial(n):
+    result = 1
+    for i in range(1, n + 1):
+        result = result * i
+    print(f"Factorial is {result}")
 
 
-def gcd(a, b):
-    if a == 0:
-        return b
-    if b == 0:
-        return a
-    if a == b:
-        return a
-    if a > b:
-        return gcd(a - b, b)
-    return gcd(a, b - a)
+# Usage
+num = int(input("Enter number: "))
+check_prime(num)
+check_even_odd(num)
+find_factorial(num)
 
-
-a = int(input("Enter a number: "))
-b = int(input("Enter another number: "))
-
-if gcd(a, b):
-    print("GCD of", a, "and", b, "is", gcd(a, b))
-else:
-    print("not found")
-
-
-def isEven(num):
-    if num % 2 == 0:
-        print(num, " is Even")
-    else:
-        print(num, " is Odd")
-
-
-num = int(input("Enter a number: "))
-isEven(num)"""
-
-
-def factorial(n):
-    if n == 0:
-        return 1
-    else:
-        return n * factorial(n - 1)
-
-
-num = int(input("Enter a number: "))
-print("Factorial of ", num, " is ", factorial(num))
+val1 = int(input("Enter first number for GCD: "))
+val2 = int(input("Enter second number for GCD: "))
+find_gcd(val1, val2)

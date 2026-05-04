@@ -1,11 +1,8 @@
 import os
 
-def get_filename(prompt):
-    return input(prompt).strip()
-
 
 def create_file():
-    filename = get_filename("Enter the filename to create: ")
+    filename = input("Enter the filename to create: ").strip()
     try:
         with open(filename, "w"):
             pass
@@ -15,7 +12,7 @@ def create_file():
 
 
 def write_to_file():
-    filename = get_filename("Enter the filename to write to: ")
+    filename = input("Enter the filename to write to: ").strip()
     content = input("Enter text to write: ")
     try:
         with open(filename, "w") as file:
@@ -26,11 +23,10 @@ def write_to_file():
 
 
 def read_file():
-    filename = get_filename("Enter the filename to read: ")
+    filename = input("Enter the filename to read: ").strip()
     if not os.path.exists(filename):
         print("File not found.")
         return
-
     try:
         with open(filename, "r") as file:
             print("\nFile Content:")
@@ -40,7 +36,7 @@ def read_file():
 
 
 def append_to_file():
-    filename = get_filename("Enter the filename to append to: ")
+    filename = input("Enter the filename to append to: ").strip()
     content = input("Enter text to append: ")
     try:
         with open(filename, "a") as file:
@@ -51,11 +47,10 @@ def append_to_file():
 
 
 def delete_file():
-    filename = get_filename("Enter the filename to delete: ")
+    filename = input("Enter the filename to delete: ").strip()
     if not os.path.exists(filename):
         print("File not found.")
         return
-
     try:
         os.remove(filename)
         print(f"File '{filename}' deleted successfully.")
@@ -63,36 +58,30 @@ def delete_file():
         print(f"Error: {e}")
 
 
-def main():
-    actions = {
-        "1": create_file,
-        "2": write_to_file,
-        "3": read_file,
-        "4": append_to_file,
-        "5": delete_file,
-    }
+# Main Menu
+while True:
+    print("\nText File Operations:")
+    print("1. Create a file")
+    print("2. Write to a file")
+    print("3. Read a file")
+    print("4. Append to a file")
+    print("5. Delete a file")
+    print("6. Exit")
 
-    while True:
-        print("\nText File Operations:")
-        print("1. Create a file")
-        print("2. Write to a file")
-        print("3. Read a file")
-        print("4. Append to a file")
-        print("5. Delete a file")
-        print("6. Exit")
+    choice = input("Enter your choice: ").strip()
 
-        choice = input("Enter your choice: ").strip()
-
-        if choice == "6":
-            print("Exiting program.")
-            break
-
-        action = actions.get(choice)
-        if action:
-            action()
-        else:
-            print("Invalid choice. Please enter a valid option.")
-
-
-if __name__ == "__main__":
-    main()
+    if choice == "1":
+        create_file()
+    elif choice == "2":
+        write_to_file()
+    elif choice == "3":
+        read_file()
+    elif choice == "4":
+        append_to_file()
+    elif choice == "5":
+        delete_file()
+    elif choice == "6":
+        print("Exiting program.")
+        break
+    else:
+        print("Invalid choice. Please enter a number between 1 and 6.")

@@ -1,75 +1,37 @@
-def list_operations():
-    print("\nList Operations:")
-    my_list = list(
-        map(int, input("Enter space-separated integers for the list: ").split())
-    )
-    my_list.append(int(input("Enter a number to append: ")))
-    x = int(input("Enter a number to remove: "))
-    if x in my_list:
-        my_list.remove(x)
-    else:
-        print("Number not found in the list")
-    print("Before Sorting: ", my_list)
-    my_list.sort()
-    print("Updated List:", my_list)
+# --- List ---
+my_list = [10, 20]
+val_list_add = int(input("Enter integer to add to list: "))
+my_list.append(val_list_add)
+val_list_del = int(input("Enter value to remove from list: "))
+if val_list_del in my_list:
+    my_list.remove(val_list_del)
+print(f"List: {my_list}\n")
 
+# --- Set ---
+my_set = {10, 20}
+val_set_add = int(input("Enter integer to add to set: "))
+my_set.add(val_set_add)
+val_set_del = int(input("Enter value to remove from set: "))
+my_set.discard(val_set_del)
+print(f"Set: {my_set}\n")
 
-def tuple_operations():
-    print("\nTuple Operations:")
-    my_tuple = tuple(
-        map(int, input("Enter space-separated integers for the tuple: ").split())
-    )
-    print("Tuple:", my_tuple)
-    y = int(input("Enter a number to count: "))
-    print("Count of an element: ", my_tuple.count(y))
-    z = int(input("Enter a number to find index: "))
-    print("Index of an element: ", my_tuple.index(z))
+# --- Tuple ---
+# Tuples are immutable; addition/deletion requires creating a new object
+my_tuple = (10, 20)
+val_tuple_add = int(input("Enter integer to add to tuple: "))
+my_tuple += (val_tuple_add,)
+val_tuple_del = int(input("Enter value to remove from tuple: "))
+temp_list = list(my_tuple)
+if val_tuple_del in temp_list:
+    temp_list.remove(val_tuple_del)
+my_tuple = tuple(temp_list)
+print(f"Tuple: {my_tuple}\n")
 
-
-def dictionary_operations():
-    print("\nDictionary Operations:")
-    my_dict = {}
-    n = int(input("Enter number of key-value pairs: "))
-    for _ in range(n):
-        key = input("Enter key: ")
-        value = input("Enter value: ")
-        my_dict[key] = value
-    print("Dictionary:", my_dict)
-
-    del_key = input("Enter key to delete: ")
-    my_dict.pop(del_key, "Key not found")
-    print("Updated Dictionary:", my_dict)
-
-    search_key = input("Enter key to search: ")
-    print("Value:", my_dict.get(search_key, "Key not found"))
-
-    update_key = input("Enter key to update value: ")
-    if update_key in my_dict:
-        my_dict[update_key] = input("Enter new value: ")
-        print("Updated Dictionary:", my_dict)
-    else:
-        print("Key not found")
-
-    print("All Keys:", list(my_dict.keys()))
-    print("All Values:", list(my_dict.values()))
-
-
-def set_operations():
-    print("\nSet Operations:")
-    my_set = set(
-        map(int, input("Enter space-separated integers for the set: ").split())
-    )
-    my_set.add(int(input("Enter a number to add: ")))
-    my_set.discard(int(input("Enter a number to remove: ")))
-    print("Updated Set:", my_set)
-
-
-def main():
-    list_operations()
-    tuple_operations()
-    dictionary_operations()
-    set_operations()
-
-
-if __name__ == "__main__":
-    main()
+# --- Dictionary ---
+my_dict = {"a": 1, "b": 2}
+k_add = input("Enter key to add to dict: ")
+v_add = int(input("Enter value for key: "))
+my_dict[k_add] = v_add
+k_del = input("Enter key to delete from dict: ")
+my_dict.pop(k_del, None)
+print(f"Dictionary: {my_dict}")
